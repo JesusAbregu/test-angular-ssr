@@ -1,5 +1,16 @@
 '@'
 import { Component } from '@angular/core';
+import { NgModule } from '@angular/core';
+
+
+import { SpinnerComponent } from './spinner/spinner.component';
+
+@NgModule({
+  declarations: [SpinnerComponent],
+  imports: [CommonModule],
+  exports: [SpinnerComponent]
+})
+export class LoadingModule {}
 
 @Component({
   selector: 'app-loading',
@@ -7,4 +18,3 @@ import { Component } from '@angular/core';
   standalone: false
 })
 export class LoadingComponent {}
-"@ | Set-Content src\app\loading\loading.component.ts

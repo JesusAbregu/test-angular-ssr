@@ -1,0 +1,103 @@
+/* src/app/usuarios/pages/usuario-listado/usuario-listado.component.css */
+.usuario-listado {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+tr:hover {
+  background-color: #f1f1f1;
+}
+.usuario-listado h1 {
+  color: #333;
+}
+.usuario-listado p {
+  color: #666;
+}
+.usuario-listado .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+.usuario-listado .btn:hover {
+  background-color: #45a049;
+}
+.usuario-listado .btn-danger {
+  background-color: #f44336;
+}
+.usuario-listado .btn-danger:hover {
+  background-color: #d32f2f;
+}
+.usuario-listado .btn-primary {
+  background-color: #008CBA;
+}
+.usuario-listado .btn-primary:hover {
+  background-color: #007bb5;
+}
+.usuario-listado .btn-secondary {
+  background-color: #e7e7e7;
+  color: black;
+}
+.usuario-listado .btn-secondary:hover {
+  background-color: #d1d1d1;
+}
+.usuario-listado .btn-success {
+  background-color: #4CAF50;
+  color: white;
+}
+.usuario-listado .btn-success:hover {
+  background-color: #45a049;
+}
+.usuario-listado .btn-warning {
+  background-color: #ff9800;
+  color: white;
+}
+.usuario-listado .btn-warning:hover {
+  background-color: #ff9100;
+}
+.usuario-listado .btn-info {
+  background-color: #2196F3;
+  color: white;
+}
+.usuario-listado .btn-info:hover {
+  background-color: #1976d2;
+}
+.usuario-listado .btn-light {
+  background-color: #f8f9fa;
+  color: black;
+}
+.usuario-listado .btn-light:hover {
+  background-color: #e9ecef;
+}
+.usuario-listado .btn-dark {
+  background-color: #343a40;
+  color: white;
+}
+.usuario-listado .btn-dark:hover {
+  background-color: #2c313a;
+}
+.usuario-listado .btn-link {
+  background-color: transparent;
+  color: #007bff;
+  text-decoration: none;
+}
+

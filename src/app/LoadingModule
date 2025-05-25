@@ -1,0 +1,11 @@
+// src/app/loading/loading.module.ts
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { SpinnerComponent } from './spinner/spinner.component';
+
+@NgModule({
+  declarations: [SpinnerComponent],
+  imports: [CommonModule],
+  exports: [SpinnerComponent]  // Exporta el SpinnerComponent
+})
+export class LoadingModule {}

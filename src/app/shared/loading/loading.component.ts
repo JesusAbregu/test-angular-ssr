@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoadingService } from './loading.service'; 
+import { LoadingService } from './loading.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
       <div class="spinner"></div>
     </div>
   `,
-  styleUrls: ['./loading.component.css']
+  styleUrls: ['./loading.component.css'],
 })
 export class LoadingComponent {
   loading$: Observable<boolean>;

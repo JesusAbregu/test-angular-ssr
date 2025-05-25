@@ -1,10 +1,18 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { LoadingComponent } from './loading.component';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
-@NgModule({
-  declarations: [LoadingComponent],
-  imports: [CommonModule],
-  exports: [LoadingComponent]
+@Injectable({
+  providedIn: 'root',
 })
-export class LoadingModule {}
+export class LoadingService {
+  private loadingSubject = new BehaviorSubject<boolean>(false);
+  loading$ = this.loadingSubject.asObservable();
+
+  show(): void {
+    this.loadingSubject.next(true);
+  }
+
+  hide(): void {
+    this.loadingSubject.next(false);
+  }
+}

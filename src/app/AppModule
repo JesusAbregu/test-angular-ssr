@@ -1,0 +1,25 @@
+// src/app/app.module.ts
+
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+
+// Módulos personalizados
+import { SharedModule } from './shared/shared.module';
+import { LoadingModule } from './loading/loading.module';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,  // Asegúrate de que AppRoutingModule esté importado
+    SharedModule,
+    LoadingModule      // Asegúrate de que LoadingModule esté importado
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}

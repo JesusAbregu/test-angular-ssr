@@ -1,19 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TestApiService } from './core/test-api.service';
+import { LoadingService } from './loading/loading.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-onDeactivate($event: any) {
-throw new Error('Method not implemented.');
-}
-onAttach($event: unknown) {
-throw new Error('Method not implemented.');
-}
-onDetach($event: unknown) {
-throw new Error('Method not implemented.');
-}
-  title = 'usuarios-app';
+export class AppComponent implements OnInit {
+  loading$: Observable<boolean>;
+
+  constructor(
+    private loadingService: LoadingService,
+    private api: TestApiService
+  ) {
+    this.loading$ = this.loadingService.loading$;
+  }
+
+  ngOnInit(): void {
+    this.api.getFakeData().subscribe(data => {
+      console.log('Datos cargados:', data);
+    });
+  }
 }
